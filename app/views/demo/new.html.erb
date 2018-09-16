@@ -1,0 +1,80 @@
+<% content_for :head do %>
+  <style>
+    .request-form{
+      margin: 0 auto;
+      width: 60%;
+    }
+    .margin-top{
+      margin-top: 15px;
+    }
+    .full-margin-top{
+      margin-top: 50px;
+    }
+  </style>
+<% end %>
+<div class="container text-center full-margin-top">
+  <div class="container">
+    <h1>Demonstração</h1>
+  </div>
+
+  <div class="form">
+      <div class="request-form text-left">
+        <hr/>
+        </div>
+        <form class="request-form" method="post" action="<%= demo_path%>">
+      <div class="row">
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Carater atendimento</label>
+          </div>
+          <%= select_tag "carater_atendimento", options_for_select(['ELETIVO', 'URGENCIA']), class: "custom-select"%>
+        </div>
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Serviço</label>
+          </div>
+          <input type="text" class="form-control" name="service_id" placeholder="Digite o id">
+        </div>
+      </div>
+      <div class="row margin-top">
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Sexo:</label>
+          </div>
+          <%= select_tag "sexo", options_for_select([['Masculino',"M"],["Feminino", "F"]]), class: "custom-select"%>
+        </div>
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Tipo do item:</label>
+          </div>
+          <%= select_tag "item_kind", options_for_select(['DIARIAS', 'GASES MEDICINAIS', 'MATERIAIS', 'MEDICAMENTOS', 'OPME','PROCEDIMENTO', 'TAXAS DIVERSAS']), class: "custom-select"%>
+        </div>
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Valor Cobrado:</label>
+          </div>
+          <input type="text" class="form-control" name="charged_value">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Dias em tratamento:</label>
+          </div>
+          <input type="text" class="form-control" name="days_inside">
+        </div>
+        <div class="col">
+          <div class="text-left">
+            <label class="label-default">Idade:</label>
+          </div>
+          <input type="text" class="form-control" name="years_old">
+        </div>
+      </div>
+      <div class="row margin-top">
+        <div class="col text-right">
+          <button type="submit" class="btn btn-primary">Confirmar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

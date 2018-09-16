@@ -1,0 +1,32 @@
+% content_for :head do %>
+  <style>
+    .margin-top{
+      margin-top: 50px;
+    }
+    
+    .form-container{
+      margin: 0 auto;
+      width: 50%;
+    }
+  </style>
+<% end %>
+<div class="vertical-center text-center margin-top">
+  <div class="container">
+    <h1>Medico Analísta 2.0</h1>
+  </div>
+  <div class="container">
+    <form class="form-container">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Digite o email">
+        <small id="emailHelp" class="form-text text-muted">Digite o email que você utilizou no seu cadastro.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+      <%=link_to ""%>
+    </form>
+  </div>
+</div>

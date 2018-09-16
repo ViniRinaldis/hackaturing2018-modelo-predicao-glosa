@@ -1,0 +1,18 @@
+<%= content_for :head do %>
+  <style>
+    .all{
+      position: absolute;
+      margin: 0 auto;
+      width: 60%;
+      height: 60%;
+      background-image: url("<%=image_path 'not_ok.png'%>");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  </style>
+<% end %>
+<div class="text-center" style="margin-top:  50px;">
+  <div class="container"><h1>Faturamento não Aprovado!</h1></div>
+  <div class="container all" style="margin-left: 474px;">
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<%content_for :head do %>
+  <style>
+    .all{
+      background-image: url("<%=image_path 'background-index.jpg'%>");
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+    }
+    .main-content{
+      width: 60%;
+      margin: 50px auto;
+    }
+    
+  </style>
+<% end %>
+
+<div class="all">
+  <div class="main-content vertical-center text-center">
+    <h1>Dra. Ana</h1>
+  </div>
+  <div class="main-content">
+    <div class="row">
+      <div class="col-sm-6 text-right">
+        <%= link_to "Demo", login_path, class: "btn btn-info"%>
+      </div>
+      <div class="col-sm-6">
+        <%= link_to "login", login_path, class: "btn btn-info"%>
+      </div>
+    </div>
+  </div>
+</div>
